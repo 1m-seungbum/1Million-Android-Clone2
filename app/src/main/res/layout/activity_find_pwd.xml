@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/find_pwd_toolbar"
+        layout="@layout/toolbar_back" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/find_pwd_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/find_pwd_toolbar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="@color/black"
+        android:text="@string/find_pwd_activiy_description"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/find_pwd_mail_layout"
+            app:layout_constraintTop_toBottomOf="@+id/find_pwd_description"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            app:hintEnabled="false"
+            android:layout_marginRight="30dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/find_pwd_mail_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="이메일 주소"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/find_pwd_button"
+            app:layout_constraintTop_toBottomOf="@id/find_pwd_mail_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:backgroundTint="#808080"
+            android:enabled="false"
+            android:text="로그인"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
